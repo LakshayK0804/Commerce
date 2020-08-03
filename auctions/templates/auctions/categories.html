@@ -12,7 +12,15 @@
 
         Categories available for current listings
         <br></br>
-        <a href="{% url 'cat_memes' %}" title = "Click to go to memes category">Memes</a>
+        <a href="{% url 'cat_memes' %}" title = "Click to view active memes listings">Memes</a>
+        <br></br>
+        <a href="{% url 'cat_gpus' %}" title = "Click to view active graphics card listings">Graphics Card</a>
+        <br></br>
+        <a href="{% url 'cat_proc' %}" title = "Click to view active processors listings">Processors</a>
+        <br></br>
+        <a href="{% url 'cat_ram' %}" title = "Click to view active RAM listings">RAM</a>
+        <br></br>
+        <a href="{% url 'cat_monitor' %}" title = "Click to view active Monitor listings">Monitor</a>
       {% endif %}
     {% endblock %}
   </body>
