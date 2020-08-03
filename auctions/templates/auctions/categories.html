@@ -10,12 +10,7 @@
 
 
         Categories available for current listings:
-
+        <a href="{% url 'categories/memes' %}" title = "Click to go to memes category">Memes</a>
     {% endblock %}
-    {% if user.is_authenticated %}
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'categories/memes' %}">Memes</a>
-        </li>
-    {% endif %}
   </body>
 </html>
