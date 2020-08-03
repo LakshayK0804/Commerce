@@ -1,8 +1,10 @@
 {% extends "auctions/layout.html" %}
 
 {% block body %}
+  {% if user.is_authenticated %}
     <h2>Memes</h2>
 
 
     Here are the current listing for category memes:
+  {% endif %}
 {% endblock %}
