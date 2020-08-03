@@ -12,5 +12,6 @@ urlpatterns = [
     path("categories/gpus", views.cat_gpus, name="cat_gpus"),
     path("categories/proc", views.cat_proc, name="cat_proc"),
     path("categories/ram", views.cat_ram, name="cat_ram"),
-    path("categories/monitor", views.cat_monitor, name="cat_monitor")
+    path("categories/monitor", views.cat_monitor, name="cat_monitor"),
+    path("watchlist", views.watchlist, name="watchlist")
 ]

@@ -79,3 +79,8 @@ def cat_ram(request):
 
 def cat_monitor(request):
     return render(request, "auctions/monitor.html")
+
+def watchlist(request):
+    return render(request, "watchlist.html")
+
+    
