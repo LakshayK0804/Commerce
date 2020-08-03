@@ -64,5 +64,18 @@ def register(request):
 
 def categories(request):
     return render(request, "auctions/categories.html")
+
 def cat_memes(request):
     return render(request, "auctions/memes.html")
+
+def cat_gpus(request):
+    return render(request, "auctions/gpus.html")
+
+def cat_proc(request):
+    return render(request, "auctions/proc.html")
+
+def cat_ram(request):
+    return render(request, "auctions/ram.html")
+
+def cat_monitor(request):
+    return render(request, "auctions/monitor.html")
