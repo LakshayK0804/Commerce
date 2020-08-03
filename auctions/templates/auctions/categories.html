@@ -6,12 +6,14 @@
   <body>
     <h1>Categories</h1>
     {% block body %}
+      {% if user.is_authenticated %}
         <h2>Categories:</h2>
 
 
         Categories available for current listings
         <br></br>
         <a href="{% url 'cat_memes' %}" title = "Click to go to memes category">Memes</a>
+      {% endif %}
     {% endblock %}
   </body>
 </html>
