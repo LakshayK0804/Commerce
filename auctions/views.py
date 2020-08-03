@@ -63,4 +63,4 @@ def register(request):
         return render(request, "auctions/register.html")
 
 def categories(request):
-    return render(request, "auctions/index.html")
+    return render(request, "auctions/categories.html")
