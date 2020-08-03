@@ -64,5 +64,5 @@ def register(request):
 
 def categories(request):
     return render(request, "auctions/categories.html")
-def memes(request):
+def cat_memes(request):
     return render(requst, "auctions/memes.html")
