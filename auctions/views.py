@@ -81,6 +81,4 @@ def cat_monitor(request):
     return render(request, "auctions/monitor.html")
 
 def watchlist(request):
-    return render(request, "watchlist.html")
-
-    
+    return render(request, "auctions/watchlist.html")
