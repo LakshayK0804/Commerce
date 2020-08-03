@@ -64,3 +64,5 @@ def register(request):
 
 def categories(request):
     return render(request, "auctions/categories.html")
+def memes(request):
+    return render(requst, "auctions/memes.html")
