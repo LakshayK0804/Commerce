@@ -9,12 +9,12 @@
         <h2>Categories:</h2>
 
 
-        Categories available for listings:
+        Categories available for current listings:
 
     {% endblock %}
     {% if user.is_authenticated %}
-        <li class="cateories">
-            <a class="categories" href="{% url 'categories/memes' %}">Memes</a>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'categories/memes' %}">Memes</a>
         </li>
     {% endif %}
   </body>
