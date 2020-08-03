@@ -82,3 +82,6 @@ def cat_monitor(request):
 
 def watchlist(request):
     return render(request, "auctions/watchlist.html")
+
+def listing_create(request):
+    return render(request, "auctions/create_listing.html")
