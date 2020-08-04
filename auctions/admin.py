@@ -7,6 +7,6 @@ from .models import Snippet
 admin.site.site_header = 'Admin DashBoard'
 
 class SnippetAdmin(admin.ModelAdmin):
-    fields = ('title','radio')
+    fields = ('title')
 
 admin.site.register(Snippet, SnippetAdmin)
