@@ -15,3 +15,6 @@ class Snippet(models.Model):
 
     def body_preview(self):
         return self.body[:50]
+
+class SnippetAdmin(admin.ModelAdmin):
+    exclude = ('title',)

@@ -1,9 +1,6 @@
 from django.contrib import admin
 from .models import Snippet
 
-
-# Register your models here.
-class SnippetAdmin(admin.ModelAdmin):
-    fields = ('title',)
-admin.site.register(Snippet, SnippetAdmin)
 admin.site.site_header = 'Admin DashBoard'
+
+admin.site.register(Snippet, SnippetAdmin)
