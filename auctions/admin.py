@@ -3,10 +3,8 @@ from .models import Snippet
 
 
 # Register your models here.
-
+admin.site.register(Snippet, SnippetAdmin)
 admin.site.site_header = 'Admin DashBoard'
 
 class SnippetAdmin(admin.ModelAdmin):
     fields = ('title',)
-
-admin.site.register(Snippet, SnippetAdmin)
