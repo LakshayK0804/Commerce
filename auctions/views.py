@@ -3,7 +3,7 @@ from django.db import IntegrityError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
-
+from .forms import ContactForm
 from .models import User
 
 
@@ -83,5 +83,7 @@ def cat_monitor(request):
 def watchlist(request):
     return render(request, "auctions/watchlist.html")
 
-def listing_create(request):
-    return render(request, "auctions/listing_create.html")
+
+def contact(request):
+    form = ContactForm()
+    return render(request, 'auctions/form.html',{'form': form})

@@ -14,5 +14,5 @@ urlpatterns = [
     path("categories/ram", views.cat_ram, name="cat_ram"),
     path("categories/monitor", views.cat_monitor, name="cat_monitor"),
     path("watchlist", views.watchlist, name="watchlist"),
-    path("listing_create", views.listing_create, name="listing_create")
+    path("contact", views.contact, name="contact")
 ]
