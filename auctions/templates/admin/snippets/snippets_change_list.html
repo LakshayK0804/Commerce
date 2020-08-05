@@ -1,0 +1,12 @@
+{% extends 'admin/change_list.html' %}
+{% block object-tools %}
+    <form id="fontsize-form" action="index.html" method="POST">
+      {% csrf_token %}
+      <input name="fontsize" class="vTextField">
+      <button class="button" type ="submit">
+    </form>
+    <script>
+      
+    </script>
+    {{ block.super }}
+{% endblock object-tools %}
