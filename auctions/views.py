@@ -85,5 +85,16 @@ def watchlist(request):
 
 
 def contact(request):
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            title= form.cleaned_data['title']
+            email = form.cleaned_data['email']
+            Category = form.cleaned_data['Category']
+            Starting_Bid = form.cleaned_data['Starting_Bid']
+            Description = form.cleaned_data['Description']
+
+            print(title,email,Category,Starting_Bid,Description)
+
     form = ContactForm()
     return render(request, 'auctions/form.html',{'form': form})
