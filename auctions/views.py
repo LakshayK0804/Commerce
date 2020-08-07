@@ -5,7 +5,8 @@ from django.shortcuts import render
 from django.urls import reverse
 from .models import Listing
 from .models import User
-
+from django.views.generic import ListView, DetailView, CreateView
+from .forms import ListingForm
 
 def index(request):
     return render(request, "auctions/index.html")
@@ -83,17 +84,15 @@ def cat_monitor(request):
 def watchlist(request):
     return render(request, "auctions/watchlist.html")
 
+class HomeView(ListView):
+    model = Listing
+    template_name = 'auctions/index.html'
 
-def contact(request):
-    if request.method == "POST":
-        form = Listing(request.POST)
-        if form.is_valid():
-            title= form.cleaned_data['title']
-            author = form.cleaned_data['author']
-            Category = form.cleaned_data['Category']
-            Starting_Bid = form.cleaned_data['Starting_Bid']
-            Description = form.cleaned_data['Description']
-            print(title,author,Category,Starting_Bid,Description)
+class ArticleDetailView(DetailView):
+    model = Listing
+    template_name = 'auctions/listing_details.html'
 
-    form = Listing()
-    return render(request, 'auctions/form.html',{'form': form})
+class AddPostView(CreateView):
+    model = Listing
+    form_class = ListingForm
+    template_name = 'auctions/form.html'

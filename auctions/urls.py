@@ -1,9 +1,9 @@
 from django.urls import path
-
+from .views import HomeView, ArticleDetailView, AddPostView
 from . import views
 
 urlpatterns = [
-    path("", views.index, name="index"),
+    path("", HomeView.as_view(), name="index"),
     path("login", views.login_view, name="login"),
     path("logout", views.logout_view, name="logout"),
     path("register", views.register, name="register"),
@@ -14,5 +14,6 @@ urlpatterns = [
     path("categories/ram", views.cat_ram, name="cat_ram"),
     path("categories/monitor", views.cat_monitor, name="cat_monitor"),
     path("watchlist", views.watchlist, name="watchlist"),
-    path("contact", views.contact, name="contact")
+    path('listing/<int:pk>', ArticleDetailView.as_view(), name='article-detail'),
+    path('add_listing',AddPostView.as_view(), name="add_post")
 ]

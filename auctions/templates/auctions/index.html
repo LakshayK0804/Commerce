@@ -2,7 +2,12 @@
 
 {% block body %}
     <h2>Active Listings</h2>
-    
-
     TODO
+    <ul>
+    {% for listing in object_list %}
+      <li><a href="{% url 'article-detail' listing.pk %}">{{  listing.title }}</a> - {{ listing.author }}<br/>
+
+    {% endfor %}
+    </ul>
+
 {% endblock %}
