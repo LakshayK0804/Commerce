@@ -3,7 +3,7 @@ from django.db import IntegrityError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
-from .forms import ContactForm
+from .models import Listing
 from .models import User
 
 
@@ -86,15 +86,14 @@ def watchlist(request):
 
 def contact(request):
     if request.method == "POST":
-        form = ContactForm(request.POST)
+        form = Listing(request.POST)
         if form.is_valid():
             title= form.cleaned_data['title']
-            email = form.cleaned_data['email']
+            author = form.cleaned_data['author']
             Category = form.cleaned_data['Category']
             Starting_Bid = form.cleaned_data['Starting_Bid']
             Description = form.cleaned_data['Description']
+            print(title,author,Category,Starting_Bid,Description)
 
-            print(title,email,Category,Starting_Bid,Description)
-
-    form = ContactForm()
+    form = Listing()
     return render(request, 'auctions/form.html',{'form': form})

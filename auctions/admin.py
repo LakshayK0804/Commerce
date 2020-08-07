@@ -1,10 +1,7 @@
 from django.contrib import admin
-from .models import Snippet
+
+from .models import Listing
 
 admin.site.site_header = 'Admin DashBoard'
 
-class SnippetAdmin(admin.ModelAdmin):
-    list_display = ('title','created')
-    list_filter = ('created',)
-    change_list_template = 'admin/snippets/snippets_change_list.html'
-admin.site.register(Snippet, SnippetAdmin)
+admin.site.register(Listing)
