@@ -1,12 +1,14 @@
 {% extends "auctions/layout.html" %}
 
 {% block body %}
-<h1>{{ listing.title }}</h1>
-<small>By: {{listing.author}}</small>
+<h1>{{ listing.title }}- <small><a href="{% url 'update_post' listing.pk %}">Edit</a></small></h1>
+<small>By: {{listing.author}} </small>
 <br/>
 <small>Current Bid: {{ listing.Starting_Bid }} dollars</small>
 <br/>
 <small>Description: {{ listing.Description }}</small>
 <br/>
 <small>Category: {{ listing.Category }}</small>
+<br/>
+<small>{{ listing.Closedlisting }}
 {% endblock %}

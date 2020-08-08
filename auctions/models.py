@@ -15,8 +15,10 @@ class Listing(models.Model):
     title = models.CharField(max_length=255)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     Category = models.CharField(choices=Categories_Available, max_length=10)
-    Starting_Bid = models.IntegerField()
+    Starting_Bid = models.PositiveIntegerField()
     Description = models.TextField()
+    Closedlisting = models.CharField(max_length=23, default = "The listing is open")
+
 
     def __str__(self):
         return self.title + ' | ' + str(self.author) + ' | ' + self.Category

@@ -5,8 +5,8 @@ from django.shortcuts import render
 from django.urls import reverse
 from .models import Listing
 from .models import User
-from django.views.generic import ListView, DetailView, CreateView
-from .forms import ListingForm
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from .forms import ListingForm, EditedListingForm
 
 def index(request):
     return render(request, "auctions/index.html")
@@ -96,3 +96,8 @@ class AddPostView(CreateView):
     model = Listing
     form_class = ListingForm
     template_name = 'auctions/form.html'
+
+class UpdatePostView(UpdateView):
+    model = Listing
+    form_class = EditedListingForm
+    template_name = 'auctions/update_post.html'

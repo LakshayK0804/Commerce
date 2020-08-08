@@ -5,7 +5,7 @@
     TODO
     <ul>
     {% for listing in object_list %}
-      <li><a href="{% url 'article-detail' listing.pk %}">{{  listing.title }}</a> - {{ listing.author }}<br/>
+      <li><a href="{% url 'article-detail' listing.pk %}">{{  listing.title }}</a> - {{ listing.author }} - <a href="{% url 'update_post' listing.pk %}">Close Auction</a><br/>
 
     {% endfor %}
     </ul>
