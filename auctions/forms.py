@@ -30,5 +30,5 @@ class EditedListingForm(forms.ModelForm):
             'Starting_Bid': forms.NumberInput(attrs={'class': 'form-control-sm','placeholder': 'The starting bid of your listing', 'disabled': 'disabled'}),
             'Description': forms.Textarea(attrs={'class': 'form-control-sm','placeholder': 'Describe your listing', 'disabled': 'disabled'}),
             'Category': forms.RadioSelect(attrs={'class': 'form-control-sm', 'placeholder': 'Select a category', 'disabled': 'disabled'}, choices=Categories_Available),
-            'Closedlisting': forms.TextInput(attrs={'class': 'form-control', 'value':'This listing is now closed', 'disabled': 'disabled'})
+            'Closedlisting': forms.TextInput(attrs={'class': 'form-control', 'value':'This listing is now closed', })
         }
